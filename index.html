@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>calculator</title>
+</head>
+<body>
+ <section class="calculetor">
+    <form>
+        <input type="text" id="myresult">
+    </form>
+   
+    <div class="butones">
+        <input class="btn btn-yelo" type="button" value="+" onclick="calculetor ('+')"> 
+        <input class="btn btn-yelo" type="button" value="-" onclick="calculetor ('-')">
+        <input class="btn btn-yelo" type="button" value="*" onclick="calculetor ('*')">
+        <input class="btn btn-yelo"  type="button" value="/" onclick="calculetor ('/')">
+        
+        <input class="btn" type="button" value="9" onclick="calculetor ('9')">
+        <input class="btn" type="button" value="8" onclick="calculetor ('8')">
+        <input class="btn" type="button" value="7" onclick="calculetor ('7')">
+        <input class="btn" type="button" value="6" onclick="calculetor ('6')">
+
+        <input class="btn" type="button" value="5" onclick="calculetor ('5')">
+        <input class="btn" type="button" value="4" onclick="calculetor ('4')">
+        <input class="btn" type="button" value="3" onclick="calculetor ('3')">
+        <input class="btn" type="button" value="2" onclick="calculetor ('2')">
+
+        <input class="btn" type="button" value="1" onclick="calculetor ('1')">
+        <input class="btn" type="button" value="0" onclick="calculetor ('0')">
+        <input class="btn" type="button" value="." onclick="calculetor ('.')">
+        <input class="btn btn-green" type="button" value="=" onclick="answer()">
+
+        <input class="btn btn-equal" type="button" value="C" onclick="deletme()">
+     </div>
+    
+     <script>
+        function deletme() {
+        document.getElementById('myresult').value = ""     
+        }
+
+        function calculetor(newresult) {
+        document.getElementById('myresult').value += newresult    
+        }
+
+        function answer() {
+            const a= document.getElementById('myresult').value;
+            const b = eval(a)
+            document.getElementById("myresult").value = b
+        }
+     </script>
+
+
+</body>
+</html>
